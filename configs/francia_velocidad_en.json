@@ -1,0 +1,30 @@
+{
+  "team": "francia",
+  "title_es": "FRANCES|SPEED DEMONS",
+  "hook_es": "UNSTOPPABLE<br>PACE",
+  "stat_title_es": "Top speed km/h",
+  "cta_es": "DOES FRANCE REACH<br>THE FINAL?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Mbappe",
+      "value": 38
+    },
+    {
+      "name": "Dembele",
+      "value": 36
+    },
+    {
+      "name": "Coman",
+      "value": 35
+    },
+    {
+      "name": "T. Hernandez",
+      "value": 34
+    },
+    {
+      "name": "Kone",
+      "value": 33
+    }
+  ]
+}

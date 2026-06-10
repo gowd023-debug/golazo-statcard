@@ -1,0 +1,30 @@
+{
+  "team": "espana",
+  "title_es": "SPAINS|MAGICIAN",
+  "hook_es": "THE YOUNGEST PLAYER<br>TO DOMINATE EUROPE",
+  "stat_title_es": "Qualifier assists",
+  "cta_es": "IS YAMAL ALREADY<br>THE WORLDS BEST?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Yamal",
+      "value": 6
+    },
+    {
+      "name": "Pedri",
+      "value": 4
+    },
+    {
+      "name": "F. Torres",
+      "value": 3
+    },
+    {
+      "name": "Olmo",
+      "value": 3
+    },
+    {
+      "name": "Williams",
+      "value": 2
+    }
+  ]
+}

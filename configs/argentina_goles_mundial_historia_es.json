@@ -1,0 +1,30 @@
+{
+  "team": "argentina",
+  "title_es": "GOLEADORES|HISTORICOS",
+  "hook_es": "LOS QUE HICIERON<br>HISTORIA EN MUNDIALES",
+  "stat_title_es": "Goles en Mundiales",
+  "cta_es": "¿MESSI LLEGA<br>A 15 GOLES?",
+  "cta_sub_es": "Comentá tu predicción 👇",
+  "players": [
+    {
+      "name": "Messi",
+      "value": 13
+    },
+    {
+      "name": "Batistuta",
+      "value": 10
+    },
+    {
+      "name": "Maradona",
+      "value": 8
+    },
+    {
+      "name": "Stabile",
+      "value": 8
+    },
+    {
+      "name": "Kempes",
+      "value": 6
+    }
+  ]
+}

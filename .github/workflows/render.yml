@@ -1,0 +1,78 @@
+name: 🎬 Render Stat Card Short
+
+on:
+  workflow_dispatch:
+    inputs:
+      config:
+        description: 'Config a renderizar (nombre del archivo en configs/)'
+        required: true
+        default: 'brasil_duelos.json'
+  push:
+    branches: [main]
+    paths: ['configs/**']
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+
+      - name: FFmpeg + Chrome
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - uses: browser-actions/setup-chrome@v1
+        with: { chrome-version: stable }
+
+      - name: HyperFrames CLI
+        run: npm install -g hyperframes@latest --ignore-scripts
+
+      - name: Generar composición desde config
+        run: |
+          CONFIG="${{ github.event.inputs.config }}"
+          if [ -z "$CONFIG" ]; then CONFIG="brasil_duelos.json"; fi
+          echo "🎯 Config: $CONFIG"
+          python3 make_short.py "configs/$CONFIG" index.html
+
+      - name: Lint
+        run: hyperframes lint . || true
+
+      - name: Render 1080x1920
+        run: |
+          mkdir -p output
+          hyperframes render index.html \
+            --output output/short_${{ github.run_number }}.mp4 \
+            --width 1080 --height 1920 --fps 30
+
+      - name: Mezclar música (si existe assets/music.mp3)
+        run: |
+          if [ -f assets/music.mp3 ]; then
+            ffmpeg -y -i output/short_${{ github.run_number }}.mp4 \
+              -stream_loop -1 -i assets/music.mp3 \
+              -filter_complex "[1:a]volume=0.5,atrim=0:38,afade=t=out:st=36:d=2[a]" \
+              -map 0:v -map "[a]" -shortest \
+              -c:v copy -c:a aac -b:a 192k \
+              output/short_final_${{ github.run_number }}.mp4
+            echo "🎵 Música mezclada"
+          else
+            cp output/short_${{ github.run_number }}.mp4 \
+               output/short_final_${{ github.run_number }}.mp4
+            echo "⚠ Sin música — agregá assets/music.mp3 (generala con Suno)"
+          fi
+
+      - name: Info
+        run: |
+          ls -lh output/
+          ffprobe output/short_final_*.mp4 2>&1 | grep -E "Duration|Video:" || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: golazo-statcard-${{ github.run_number }}
+          path: output/short_final_*.mp4
+          retention-days: 7

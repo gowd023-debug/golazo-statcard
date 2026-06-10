@@ -1,0 +1,30 @@
+{
+  "team": "portugal",
+  "title_es": "EL ULTIMO BAILE|DE CR7",
+  "hook_es": "6 MUNDIALES<br>A LOS 41 AÑOS",
+  "stat_title_es": "Goles seleccion",
+  "cta_es": "¿RONALDO GANA SU<br>PRIMER MUNDIAL?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Ronaldo",
+      "value": 143
+    },
+    {
+      "name": "Messi",
+      "value": 114
+    },
+    {
+      "name": "Neymar",
+      "value": 79
+    },
+    {
+      "name": "Kane",
+      "value": 76
+    },
+    {
+      "name": "Mbappe",
+      "value": 55
+    }
+  ]
+}

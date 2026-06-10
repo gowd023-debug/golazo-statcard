@@ -1,0 +1,30 @@
+{
+  "team": "inglaterra",
+  "title_es": "LA MAQUINA|DE GOLES",
+  "hook_es": "NADIE MARCO MAS<br>EN EUROPA 2025-26",
+  "stat_title_es": "Goles temporada 25-26",
+  "cta_es": "¿KANE POR FIN GANA<br>UN TITULO GRANDE?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Kane",
+      "value": 61
+    },
+    {
+      "name": "Mbappe",
+      "value": 52
+    },
+    {
+      "name": "Haaland",
+      "value": 48
+    },
+    {
+      "name": "Lewandowski",
+      "value": 42
+    },
+    {
+      "name": "Vinicius",
+      "value": 38
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "team": "inglaterra",
+  "title_es": "THE GOAL|MACHINE",
+  "hook_es": "NOBODY SCORED MORE<br>IN EUROPE 2025-26",
+  "stat_title_es": "Goals season 25-26",
+  "cta_es": "DOES KANE FINALLY<br>WIN A MAJOR TROPHY?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Kane",
+      "value": 61
+    },
+    {
+      "name": "Mbappe",
+      "value": 52
+    },
+    {
+      "name": "Haaland",
+      "value": 48
+    },
+    {
+      "name": "Lewandowski",
+      "value": 42
+    },
+    {
+      "name": "Vinicius",
+      "value": 38
+    }
+  ]
+}

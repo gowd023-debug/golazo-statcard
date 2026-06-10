@@ -1,0 +1,30 @@
+{
+  "team": "alemania",
+  "title_es": "EL MONSTRUO|DEL NORTE",
+  "hook_es": "16 GOLES EN<br>ELIMINATORIAS UEFA",
+  "stat_title_es": "Goles clasificacion UEFA",
+  "cta_es": "¿HAALAND GOLEADOR<br>DEL MUNDIAL 2026?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Haaland",
+      "value": 16
+    },
+    {
+      "name": "Kane",
+      "value": 8
+    },
+    {
+      "name": "Gyokeres",
+      "value": 7
+    },
+    {
+      "name": "Kramaric",
+      "value": 6
+    },
+    {
+      "name": "Schick",
+      "value": 6
+    }
+  ]
+}

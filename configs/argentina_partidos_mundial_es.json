@@ -1,0 +1,30 @@
+{
+  "team": "argentina",
+  "title_es": "EL RECORD|ABSOLUTO",
+  "hook_es": "MAS PARTIDOS QUE NADIE<br>EN LA HISTORIA",
+  "stat_title_es": "Partidos en Mundiales",
+  "cta_es": "¿CUANTOS JUGARA<br>EN 2026?",
+  "cta_sub_es": "Comentá tu número 👇",
+  "players": [
+    {
+      "name": "Messi",
+      "value": 26
+    },
+    {
+      "name": "Maradona",
+      "value": 21
+    },
+    {
+      "name": "Mascherano",
+      "value": 20
+    },
+    {
+      "name": "Ayala",
+      "value": 17
+    },
+    {
+      "name": "Simeone",
+      "value": 16
+    }
+  ]
+}

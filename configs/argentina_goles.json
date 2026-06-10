@@ -1,0 +1,15 @@
+{
+  "team": "argentina",
+  "title_es": "LOS GOLEADORES|DE ARGENTINA",
+  "hook_es": "ELLOS DECIDEN<br>LOS PARTIDOS",
+  "stat_title_es": "Goles en 2026",
+  "cta_es": "¿ARGENTINA<br>BACK TO BACK?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {"name": "Messi",       "value": 9},
+    {"name": "Lautaro",     "value": 7},
+    {"name": "J. Alvarez",  "value": 6},
+    {"name": "Di Maria",    "value": 4},
+    {"name": "Mac Allister","value": 3}
+  ]
+}

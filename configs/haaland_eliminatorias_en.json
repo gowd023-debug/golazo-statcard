@@ -1,0 +1,30 @@
+{
+  "team": "alemania",
+  "title_es": "THE MONSTER|FROM THE NORTH",
+  "hook_es": "16 GOALS IN<br>UEFA QUALIFIERS",
+  "stat_title_es": "UEFA qualifier goals",
+  "cta_es": "HAALAND WINS THE<br>2026 GOLDEN BOOT?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Haaland",
+      "value": 16
+    },
+    {
+      "name": "Kane",
+      "value": 8
+    },
+    {
+      "name": "Gyokeres",
+      "value": 7
+    },
+    {
+      "name": "Kramaric",
+      "value": 6
+    },
+    {
+      "name": "Schick",
+      "value": 6
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "team": "portugal",
+  "title_es": "CR7S|LAST DANCE",
+  "hook_es": "6 WORLD CUPS<br>AT AGE 41",
+  "stat_title_es": "International goals",
+  "cta_es": "DOES RONALDO WIN<br>HIS FIRST WORLD CUP?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Ronaldo",
+      "value": 143
+    },
+    {
+      "name": "Messi",
+      "value": 114
+    },
+    {
+      "name": "Neymar",
+      "value": 79
+    },
+    {
+      "name": "Kane",
+      "value": 76
+    },
+    {
+      "name": "Mbappe",
+      "value": 55
+    }
+  ]
+}

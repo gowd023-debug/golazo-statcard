@@ -1,0 +1,30 @@
+{
+  "team": "brasil",
+  "title_es": "THE WALL|OF BRAZIL",
+  "hook_es": "NOBODY BEATS THEM<br>IN A DUEL",
+  "stat_title_es": "Duels won",
+  "cta_es": "DOES BRAZIL WIN<br>WORLD CUP 2026?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Casemiro",
+      "value": 12
+    },
+    {
+      "name": "B. Guimaraes",
+      "value": 8
+    },
+    {
+      "name": "M. Cunha",
+      "value": 8
+    },
+    {
+      "name": "Marquinhos",
+      "value": 7
+    },
+    {
+      "name": "Fabinho",
+      "value": 7
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "team": "espana",
+  "title_es": "EL MAGO|DE ESPAÑA",
+  "hook_es": "EL JUGADOR MAS JOVEN<br>EN DOMINAR EUROPA",
+  "stat_title_es": "Asistencias clasificacion",
+  "cta_es": "¿YAMAL ES EL MEJOR<br>DEL MUNDO YA?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Yamal",
+      "value": 6
+    },
+    {
+      "name": "Pedri",
+      "value": 4
+    },
+    {
+      "name": "F. Torres",
+      "value": 3
+    },
+    {
+      "name": "Olmo",
+      "value": 3
+    },
+    {
+      "name": "Williams",
+      "value": 2
+    }
+  ]
+}

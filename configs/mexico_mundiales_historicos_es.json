@@ -1,0 +1,30 @@
+{
+  "team": "mexico",
+  "title_es": "LOS HEROES|DEL TRI",
+  "hook_es": "MUNDIAL EN CASA<br>POR TERCERA VEZ",
+  "stat_title_es": "Goles en Mundiales",
+  "cta_es": "¿MEXICO PASA EL<br>QUINTO PARTIDO?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "L. Hernandez",
+      "value": 4
+    },
+    {
+      "name": "Borgetti",
+      "value": 3
+    },
+    {
+      "name": "Chicharito",
+      "value": 3
+    },
+    {
+      "name": "Gimenez",
+      "value": 2
+    },
+    {
+      "name": "Lozano",
+      "value": 2
+    }
+  ]
+}

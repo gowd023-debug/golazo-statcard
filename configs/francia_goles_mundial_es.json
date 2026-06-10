@@ -1,0 +1,30 @@
+{
+  "team": "francia",
+  "title_es": "LEYENDAS|DE FRANCIA",
+  "hook_es": "LOS GOLEADORES<br>DE LES BLEUS",
+  "stat_title_es": "Goles en Mundiales",
+  "cta_es": "¿MBAPPE SUPERA<br>A KLOSE (16)?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Mbappe",
+      "value": 12
+    },
+    {
+      "name": "Fontaine",
+      "value": 13
+    },
+    {
+      "name": "Griezmann",
+      "value": 8
+    },
+    {
+      "name": "Henry",
+      "value": 6
+    },
+    {
+      "name": "Giroud",
+      "value": 6
+    }
+  ]
+}

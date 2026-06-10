@@ -1,0 +1,15 @@
+{
+  "team": "francia",
+  "title_es": "LOS MAS RAPIDOS|DE FRANCIA",
+  "hook_es": "VELOCIDAD<br>IMPARABLE",
+  "stat_title_es": "Km/h maxima",
+  "cta_es": "¿FRANCIA LLEGA<br>A LA FINAL?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {"name": "Mbappe",   "value": 38},
+    {"name": "Dembele",  "value": 36},
+    {"name": "Coman",    "value": 35},
+    {"name": "Hernandez","value": 34},
+    {"name": "Kone",     "value": 33}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "team": "argentina",
+  "title_es": "EL GOLEADOR|DE AMERICA",
+  "hook_es": "NADIE MARCO MAS<br>EN ELIMINATORIAS",
+  "stat_title_es": "Goles eliminatorias",
+  "cta_es": "¿MESSI GANA OTRO<br>BALON DE ORO?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Messi",
+      "value": 8
+    },
+    {
+      "name": "L. Diaz",
+      "value": 7
+    },
+    {
+      "name": "Terceros",
+      "value": 6
+    },
+    {
+      "name": "D. Nunez",
+      "value": 5
+    },
+    {
+      "name": "Raphinha",
+      "value": 5
+    }
+  ]
+}

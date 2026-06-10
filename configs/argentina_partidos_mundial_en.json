@@ -1,0 +1,30 @@
+{
+  "team": "argentina",
+  "title_es": "THE ABSOLUTE|RECORD",
+  "hook_es": "MORE GAMES THAN ANYONE<br>IN HISTORY",
+  "stat_title_es": "World Cup matches",
+  "cta_es": "HOW MANY WILL<br>HE PLAY IN 2026?",
+  "cta_sub_es": "Comment your number 👇",
+  "players": [
+    {
+      "name": "Messi",
+      "value": 26
+    },
+    {
+      "name": "Maradona",
+      "value": 21
+    },
+    {
+      "name": "Mascherano",
+      "value": 20
+    },
+    {
+      "name": "Ayala",
+      "value": 17
+    },
+    {
+      "name": "Simeone",
+      "value": 16
+    }
+  ]
+}

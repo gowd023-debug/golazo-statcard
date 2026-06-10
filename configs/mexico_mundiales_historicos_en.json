@@ -1,0 +1,30 @@
+{
+  "team": "mexico",
+  "title_es": "EL TRIS|HEROES",
+  "hook_es": "HOME WORLD CUP<br>FOR THE THIRD TIME",
+  "stat_title_es": "World Cup goals",
+  "cta_es": "DOES MEXICO BREAK<br>THE 5TH GAME CURSE?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "L. Hernandez",
+      "value": 4
+    },
+    {
+      "name": "Borgetti",
+      "value": 3
+    },
+    {
+      "name": "Chicharito",
+      "value": 3
+    },
+    {
+      "name": "Gimenez",
+      "value": 2
+    },
+    {
+      "name": "Lozano",
+      "value": 2
+    }
+  ]
+}

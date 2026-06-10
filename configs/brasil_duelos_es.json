@@ -1,0 +1,30 @@
+{
+  "team": "brasil",
+  "title_es": "LA MURALLA|DE BRASIL",
+  "hook_es": "NADIE LES GANA<br>UN DUELO",
+  "stat_title_es": "Duelos ganados",
+  "cta_es": "¿BRASIL GANA<br>EL MUNDIAL 2026?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Casemiro",
+      "value": 12
+    },
+    {
+      "name": "B. Guimaraes",
+      "value": 8
+    },
+    {
+      "name": "M. Cunha",
+      "value": 8
+    },
+    {
+      "name": "Marquinhos",
+      "value": 7
+    },
+    {
+      "name": "Fabinho",
+      "value": 7
+    }
+  ]
+}

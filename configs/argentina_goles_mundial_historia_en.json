@@ -1,0 +1,30 @@
+{
+  "team": "argentina",
+  "title_es": "ARGENTINA WC|ALL-TIME SCORERS",
+  "hook_es": "THE MEN WHO MADE<br>WORLD CUP HISTORY",
+  "stat_title_es": "World Cup goals",
+  "cta_es": "CAN MESSI<br>REACH 15?",
+  "cta_sub_es": "Drop your prediction 👇",
+  "players": [
+    {
+      "name": "Messi",
+      "value": 13
+    },
+    {
+      "name": "Batistuta",
+      "value": 10
+    },
+    {
+      "name": "Maradona",
+      "value": 8
+    },
+    {
+      "name": "Stabile",
+      "value": 8
+    },
+    {
+      "name": "Kempes",
+      "value": 6
+    }
+  ]
+}

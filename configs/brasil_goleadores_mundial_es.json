@@ -1,0 +1,30 @@
+{
+  "team": "brasil",
+  "title_es": "LOS REYES|DE BRASIL",
+  "hook_es": "LA HISTORIA DEL<br>PAIS DEL FUTBOL",
+  "stat_title_es": "Goles en Mundiales",
+  "cta_es": "¿BRASIL GANA<br>EL HEXA EN 2026?",
+  "cta_sub_es": "Comentá SÍ o NO 👇",
+  "players": [
+    {
+      "name": "Ronaldo",
+      "value": 15
+    },
+    {
+      "name": "Pele",
+      "value": 12
+    },
+    {
+      "name": "Vava",
+      "value": 9
+    },
+    {
+      "name": "Jairzinho",
+      "value": 9
+    },
+    {
+      "name": "Neymar",
+      "value": 8
+    }
+  ]
+}

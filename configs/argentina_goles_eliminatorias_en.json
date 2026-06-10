@@ -1,0 +1,30 @@
+{
+  "team": "argentina",
+  "title_es": "SOUTH AMERICAS|TOP SCORER",
+  "hook_es": "NOBODY SCORED MORE<br>IN QUALIFIERS",
+  "stat_title_es": "Qualifier goals",
+  "cta_es": "CAN MESSI WIN<br>ANOTHER GOLDEN BOOT?",
+  "cta_sub_es": "Comment YES or NO 👇",
+  "players": [
+    {
+      "name": "Messi",
+      "value": 8
+    },
+    {
+      "name": "L. Diaz",
+      "value": 7
+    },
+    {
+      "name": "Terceros",
+      "value": 6
+    },
+    {
+      "name": "D. Nunez",
+      "value": 5
+    },
+    {
+      "name": "Raphinha",
+      "value": 5
+    }
+  ]
+}
