@@ -55,9 +55,9 @@ jobs:
           echo "🎬 Produciendo: $BASE"
           python3 make_short.py "configs/$NAME" index.html
           mkdir -p output
-          hyperframes render index.html \
+          hyperframes render . \
             --output "output/${BASE}.mp4" \
-            --width 1080 --height 1920 --fps 30
+            --fps 30
 
       - name: Música (si existe)
         run: |
