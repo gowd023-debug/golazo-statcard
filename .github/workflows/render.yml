@@ -46,9 +46,9 @@ jobs:
       - name: Render 1080x1920
         run: |
           mkdir -p output
-          hyperframes render index.html \
+          hyperframes render . \
             --output output/short_${{ github.run_number }}.mp4 \
-            --width 1080 --height 1920 --fps 30
+            --fps 30
 
       - name: Mezclar música (si existe assets/music.mp3)
         run: |
