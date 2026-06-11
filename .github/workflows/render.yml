@@ -1,82 +1,79 @@
-name: 🎬 Render Stat Card Short
+name: Render Stat Card Short
 
 on:
   workflow_dispatch:
-      inputs:
-            config:
-                    description: 'Config a renderizar (nombre del archivo en configs/)'
-                            required: true
-                                    default: 'brasil_duelos_es.json'
-                                      push:
-                                          branches: [main]
-                                              paths: ['configs/**']
+    inputs:
+      config:
+        description: 'Config a renderizar (ej: brasil_duelos_es.json)'
+        required: true
+        default: 'brasil_duelos_es.json'
+  push:
+    branches: [main]
+    paths: ['configs/**']
 
-                                              jobs:
-                                                render:
-                                                    runs-on: ubuntu-latest
-                                                        timeout-minutes: 25
-                                                            steps:
-                                                                  - uses: actions/checkout@v4
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
 
-                                                                        - uses: actions/setup-node@v4
-                                                                                with: { node-version: '20' }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-                                                                                      - uses: actions/setup-python@v5
-                                                                                              with: { python-version: '3.11' }
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-                                                                                                    - name: FFmpeg + Chrome
-                                                                                                            run: |
-                                                                                                                      sudo apt-get update -qq && sudo apt-get install -y ffmpeg xvfb
-                                                                                                                            - uses: browser-actions/setup-chrome@v1
-                                                                                                                                    with: { chrome-version: stable }
-                                                                                                                                    
-                                                                                                                                          - name: HyperFrames CLI
-                                                                                                                                                  run: npm install -g hyperframes@latest --ignore-scripts
-                                                                                                                                                  
-                                                                                                                                                        - name: Generar composición desde config
-                                                                                                                                                                run: |
-                                                                                                                                                                          CONFIG="${{ github.event.inputs.config }}"
-                                                                                                                                                                                    if [ -z "$CONFIG" ]; then CONFIG="brasil_duelos_es.json"; fi
-                                                                                                                                                                                              echo "🎯 Config: $CONFIG"
-                                                                                                                                                                                                        python3 make_short.py "configs/$CONFIG" index.html
-                                                                                                                                                                                                        
-                                                                                                                                                                                                              - name: Lint
-                                                                                                                                                                                                                      run: hyperframes lint . || true
-                                                                                                                                                                                                                      
-                                                                                                                                                                                                                            - name: Render 1080x1920
-                                                                                                                                                                                                                                    run: |
-                                                                                                                                                                                                                                              mkdir -p output
-                                                                                                                                                                                                                                                        Xvfb :99 -screen 0 1920x1080x24 &
-                                                                                                                                                                                                                                                                  sleep 2
-                                                                                                                                                                                                                                                                            DISPLAY=:99 hyperframes render . \
-                                                                                                                                                                                                                                                                                        --output output/short_${{ github.run_number }}.mp4 \
-                                                                                                                                                                                                                                                                                                    --fps 30
-                                                                                                                                                                                                                                                                                                            env:
-                                                                                                                                                                                                                                                                                                                      DISPLAY: ':99'
-                                                                                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                                                                                            - name: Mezclar música (si existe assets/music.mp3)
-                                                                                                                                                                                                                                                                                                                                    run: |
-                                                                                                                                                                                                                                                                                                                                              if [ -f assets/music.mp3 ]; then
-                                                                                                                                                                                                                                                                                                                                                          ffmpeg -y -i output/short_${{ github.run_number }}.mp4 \
-                                                                                                                                                                                                                                                                                                                                                                        -stream_loop -1 -i assets/music.mp3 \
-                                                                                                                                                                                                                                                                                                                                                                                      -filter_complex "[1:a]volume=0.5,atrim=0:38,afade=t=out:st=36:d=2[a]" \
-                                                                                                                                                                                                                                                                                                                                                                                                    -map 0:v -map "[a]" -shortest \
-                                                                                                                                                                                                                                                                                                                                                                                                                  -c:v copy -c:a aac -b:a 192k \
-                                                                                                                                                                                                                                                                                                                                                                                                                                output/short_final_${{ github.run_number }}.mp4
-                                                                                                                                                                                                                                                                                                                                                                                                                                            echo "🎵 Música mezclada"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      else
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  cp output/short_${{ github.run_number }}.mp4 \
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 output/short_final_${{ github.run_number }}.mp4
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             echo "⚠ Sin música — agregá assets/music.mp3 (generala con Suno)"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       fi
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             - name: Info
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     run: |
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ls -lh output/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ffprobe output/short_final_*.mp4 2>&1 | grep -E "Duration|Video:" || true
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               - uses: actions/upload-artifact@v4
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       with:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 name: golazo-statcard-${{ github.run_number }}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           path: output/short_final_*.mp4
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     retention-days: 7
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg xvfb
+
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: HyperFrames CLI
+        run: npm install -g hyperframes@latest --ignore-scripts
+
+      - name: Generar composicion desde config
+        run: |
+          CONFIG="${{ github.event.inputs.config }}"
+          if [ -z "$CONFIG" ]; then CONFIG="brasil_duelos_es.json"; fi
+          echo "Config: $CONFIG"
+          python3 make_short.py "configs/$CONFIG" index.html
+
+      - name: Lint
+        run: hyperframes lint . || true
+
+      - name: Render 1080x1920
+        run: |
+          mkdir -p output
+          Xvfb :99 -screen 0 1920x1080x24 &
+          sleep 2
+          DISPLAY=:99 hyperframes render . --output output/short_${{ github.run_number }}.mp4 --fps 30
+        env:
+          DISPLAY: ':99'
+
+      - name: Mezclar musica
+        run: |
+          IN="output/short_${{ github.run_number }}.mp4"
+          OUT="output/short_final_${{ github.run_number }}.mp4"
+          if [ -f assets/music.mp3 ]; then
+            ffmpeg -y -i "$IN" -stream_loop -1 -i assets/music.mp3 -filter_complex "[1:a]volume=0.5,atrim=0:38,afade=t=out:st=36:d=2[a]" -map 0:v -map "[a]" -shortest -c:v copy -c:a aac -b:a 192k "$OUT"
+          else
+            cp "$IN" "$OUT"
+          fi
+
+      - name: Info
+        run: |
+          ls -lh output/
+          ffprobe output/short_final_*.mp4 2>&1 | grep -E "Duration|Video:" || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: golazo-statcard-${{ github.run_number }}
+          path: output/short_final_*.mp4
+          retention-days: 7
